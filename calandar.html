@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달력</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Jua", sans-serif;
+        }
+        .wrap{
+            width : 450px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 25px;
+        }
+        .nav{
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .wrap .nav .current-date{
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .wrap .nav button{
+            width: 38px;
+            height: 38px;
+            font-size: 10px;
+            color:#878787;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #008aff;
+        }
+        .calandar ul{
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .calandar .days li{
+            font-weight: 500;
+        }
+        .calandar .days {
+            margin-bottom: 20px;
+        }
+        .calandar ul li{
+            width:calc(100%/7);
+            position: relative;
+
+        }
+        .dates{
+            list-style: none;
+        }
+        .calandar .dates li{
+            z-index: 1;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .calandar .dates li .inactive{
+            color: #aaa;
+        }
+        .calandar .dates li.active{
+            color: #fff;
+        }
+        .calandar .dates li::before{
+            position: absolute;
+            content:'';
+            height: 40px;
+            width: 40px;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .dates li:hover::before{
+            background: #f2f2f2;
+        }
+        .dates li.active::before{
+            background: #008aff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="nav">
+                <button class="material-icons"> 이전달 </button>
+                <p class="current-date"></p>
+                <button class="meterial-icons"> 다음달 </button>
+            </div>
+        </header>
+        <div class="calandar">
+            <ul class="days">
+                <li>일</li>
+                <li>월</li>
+                <li>화</li>
+                <li>수</li>
+                <li>목</li>
+                <li>금</li>
+                <li>토</li>
+            </ul>
+            <ul class="dates">
+                <li class="inactive"></li>
+                <li class="inactive"></li>
+                <li class="inactive"></li>
+                <li class="inactive"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let date=new Date();
+        let currYear = date.getFullYear();
+        let currMonth = date.getMonth()+1;
+        let currentDate = document.querySelector(".current-date");
+        currentDate.innerHTML=currYear+"년 "+currMonth+"월";
+
+        let firstDayofMonth = new Date(currYear,currMonth, 1).getDay();
+        let lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay();
+        let lastDateofLastMonth = new Date(currYear, currMonth,0).getDate();
+        
+
+        let dateTag = document.querySelector(".dates");
+
+
+    </script>
+</body>
+</html>
