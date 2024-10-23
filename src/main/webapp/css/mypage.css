@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+#wrap{
+	margin: 0 auto;
+	width: 350px;
+	border : 20px solid lightgrey;
+	padding : 50px;
+}
+a{
+	color :inherit;
+	text-decoration: none;
+}
+button{
+	cursor: pointer;
+}
+
+span{ /*인라인 태그라서 이 상태로는 width를 못가짐. 그래서 display상태를 줘야함*/
+	display: inline-block;
+	width: 100px;
+	line-height: 3;
+}
+.button{
+	text-align:center;
+	width: 100%;
+	height : 80px;
+	display: flex;
+	align-items : flex-end;
+	justify-content : space-evenly;
+}
+.button input{
+	width:100px;
+	background-color:white;
+	font-weight:600;
+	cursor: pointer;
+}
+form a{
+	border:1px solid #333;
+	border-radius:5px;
+	font-size:14px;
+	text-align:center;
+	padding:5px;
+	font-weight:bold;
+}

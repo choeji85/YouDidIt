@@ -1,0 +1,237 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+#wrap{	 
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: 1200px;
+    font-family: "Jua", sans-serif;
+}
+a{
+	text-decoration:none;
+	color:inherit;
+}
+button{
+	cursor: pointer;
+}
+div{
+	border-radius:15px;
+	margin:2px;
+}
+#title{
+    width: 100%;
+    height: 50px;
+    background-color: #597cda;
+    font-weight: 300;
+}
+#header{
+    width:100%;
+    display: flex;
+}
+h1, h2{
+    margin-left: 10px;
+    color: #fff;
+    font-weight: 300;
+}
+.star{
+    font-size: larger;
+}
+.saying{
+    width:75%;
+    height: 150px;
+    background-color: #8f8f8f;
+}
+.login{
+    width: 25%;
+    height: 150px;
+    background-color: #ececec;
+    text-align:center;
+}
+.lmenu{
+	width: 100%;
+	display: flex;
+	justify-content : space-evenly;
+}
+.login h5{
+	font-size : 14px;
+}
+.input{
+	width: 80px;
+    color: grey;
+    margin: 10px;
+    float: left;
+}
+.login .input{
+    width: 150px;
+    height: 15px;
+    margin-right: 10px;
+}
+.login h5{
+	display:inline;
+}
+input[type="submit"], input[type="button"]{
+	width : 50px;
+	height : 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font: inherit;
+    border: none;
+}
+#body{
+    width:100%;
+    display: flex;
+}
+h3{
+    text-align: center;
+    font-weight: 200;
+}
+ul{
+    list-style: none;
+    padding-inline-start:0;
+}
+.did .willdo{
+	padding-left:0;
+
+}
+.did p, .willdo p{
+	text-align:center;	
+}
+.left{
+    width: 25%;
+    height: 450px;
+    background-color: #31c06d;
+    color: #fff;
+}
+.did li, .willdo li{
+	display:flex;
+	justify-content:space-around;
+	margin-bottom:10px;
+	font-size:14px;
+}
+.did li:hover, .willdo li:hover{
+	cursor:pointer;
+}
+.did li input{
+	display:inline;
+	margin-right:5px;
+}
+.did li input[type="submit"]{
+	width: 50px;
+	font-size: 14px;
+}
+#calandar{
+    width: 600px;
+    height: 450px;
+    background: #ececec;
+    display:block;	
+}
+#calandar .nav{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#calandar .nav .current-month{
+    font-size: 20px;
+    font-weight: 600;
+}
+#calandar button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+#calandar .nav button{
+    width: 38px;
+    height: 38px;
+    font-size: 10px;
+    color:#878787;
+}
+.calandar{
+    align-items: center;
+    justify-content: center;
+}
+.calandar ul{
+	width:100%;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+    padding:0;   
+}
+.calandar .days li{
+    font-weight: 500;
+}
+.calandar .date {
+    margin-bottom: 20px;
+}
+.calandar ul li{
+    width:calc(100%/7);
+    position: relative;
+}
+.date{
+    list-style: none;
+    margin: auto;
+}
+.calandar .date li{
+    z-index: 1;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.calandar .date li.inactive{
+    color: #aaa;
+}
+.calandar .date li.active{
+    color: #fff;
+}
+.calandar .date li::before{
+    position: absolute;
+    content:'';
+    height: 40px;
+    width: 40px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+.date li:hover::before{
+    background: #fff;
+}
+.date li.active::before{
+    background: #008aff;
+}
+.right{
+    width: 25%;
+    height: 450px;
+    background-color: #78c8d6;
+    color: #fff;
+}
+.willdo li input{
+	display:inline;
+	margin-right:5px;
+}
+.willdo li input[type="submit"]{
+	width: 50px;
+	font-size: 14px;
+}
+.did input, .willdo input{
+	display:inline-block;
+	width: 200px;
+	margin:0 auto;
+	font-size:12px;
+}
+#footer{
+	margin-top:2px;
+    width: 100%;
+    height: 50px;
+    background-color: #597cda;
+    color : #fff;
+    align-items:center;
+}
+#footer p{
+	margin:0;
+	padding: 10px;
+}
